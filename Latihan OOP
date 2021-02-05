@@ -1,0 +1,20 @@
+class hero:
+    jumlah = 0
+
+    def __init__(self, nama, power, health, armor):
+        self.nama = nama
+        self.health = health
+        self.armor = armor
+        self.power = power
+
+    def Menyerang(self, lawan):
+        print(self.power)
+        lawan.Diserang(self)    
+
+    def Diserang(self, lawan):
+        print(self.health - lawan.power)
+    
+aldous = hero('aldous',20, 100, 10)
+sun = hero('sun', 30, 100, 20)
+
+aldous.Menyerang(sun)
