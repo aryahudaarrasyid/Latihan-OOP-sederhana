@@ -14,7 +14,14 @@ class hero:
     def Diserang(self, lawan):
         print(self.health - lawan.power)
     
+    # Contoh def dengan isian self saja:
+    def Siapa(self):
+        print("Saya adalah" + self.nama)
+    
 aldous = hero('aldous',20, 100, 10)
 sun = hero('sun', 30, 100, 20)
 
 aldous.Menyerang(sun)
+sun.Menyerang(aldous)
+aldous.Siapa()
+sun.Siapa()
